@@ -30,3 +30,9 @@ Real AI integration; healthcare-focused evaluation; consent and privacy; interac
 ## License
 
 MIT.
+
+## Vercel AI Gateway integration
+
+Optional AI drafts use the server-only Chat Completions endpoint. Set `AI_GATEWAY_MODEL` to a model from the live catalog and use `AI_GATEWAY_API_KEY` locally or `VERCEL_OIDC_TOKEN` on Vercel. `.env.example` documents configuration; the Python server reads exported environment variables and does not automatically load .env files.
+
+Text is sent only after explicit consent. Use fictional examples; saved reports are never sent automatically. Output is validated and labeled AI-generated. No live generation has been verified without project credentials. Add authenticated access and rate limiting before exposing this endpoint publicly.
