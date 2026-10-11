@@ -59,10 +59,9 @@ export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <div aria-hidden="true" className="absolute -top-32 -right-24 size-[34rem] rounded-full bg-teal/12 blur-3xl" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-14 pb-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full bg-teal-soft px-3 py-1 text-sm font-bold text-teal-strong">
+            <p className="inline-flex items-center gap-2 rounded-full bg-brand-soft px-3 py-1 text-sm font-bold text-brand-strong">
               <MessageCircleQuestion className="size-4" aria-hidden="true" /> Appointment preparation
             </p>
             <h1 className="mt-6 font-serif text-5xl leading-[1.05] font-semibold tracking-tight sm:text-6xl">
@@ -81,7 +80,7 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-6 flex items-center gap-2 text-sm text-ink-soft">
-              <ShieldCheck className="size-4 text-teal" aria-hidden="true" />
+              <ShieldCheck className="size-4 text-brand" aria-hidden="true" />
               Free · no account · your notes stay on your device
             </p>
           </div>
@@ -98,7 +97,7 @@ export default function Home() {
                 <span className="absolute top-6 right-7 font-serif text-5xl font-semibold text-line-strong">
                   {index + 1}
                 </span>
-                <span className="grid size-12 place-items-center rounded-2xl bg-teal text-on-teal">
+                <span className="grid size-12 place-items-center rounded-2xl bg-brand text-on-brand">
                   <Icon className="size-6" aria-hidden="true" />
                 </span>
                 <h3 className="mt-6 text-xl font-bold">{title}</h3>
@@ -120,7 +119,7 @@ export default function Home() {
           <ul className="grid gap-4 sm:grid-cols-2">
             {PROMISES.map(({ icon: Icon, title, body }) => (
               <li key={title} className="card p-6">
-                <Icon className="size-6 text-teal" aria-hidden="true" />
+                <Icon className="size-6 text-brand" aria-hidden="true" />
                 <h3 className="mt-4 font-bold">{title}</h3>
                 <p className="mt-1 text-ink-soft">{body}</p>
               </li>
@@ -130,12 +129,12 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
-        <div className="flex flex-col items-start gap-6 rounded-[2rem] bg-teal p-8 text-on-teal sm:p-12 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col items-start gap-6 rounded-[2rem] border border-line bg-sunken p-8 text-ink sm:p-12 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="font-serif text-3xl font-semibold">Got an appointment coming up?</h2>
-            <p className="mt-2 opacity-85">Five minutes now can make the visit count.</p>
+            <p className="mt-2 text-ink-soft">Five minutes now can make the visit count.</p>
           </div>
-          <Link href="/prepare" className="btn shrink-0 bg-surface px-6 text-lg text-ink hover:bg-canvas">
+          <Link href="/prepare" className="btn btn-primary shrink-0 px-6 text-lg">
             Start preparing <ArrowRight className="size-5" aria-hidden="true" />
           </Link>
         </div>
@@ -167,7 +166,7 @@ function BriefPreview() {
           ].map(([q, done]) => (
             <li key={String(q)} className="flex items-center gap-2.5">
               <span
-                className={`grid size-5 shrink-0 place-items-center rounded-md border-2 ${done ? 'border-teal bg-teal text-on-teal' : 'border-line-strong'}`}
+                className={`grid size-5 shrink-0 place-items-center rounded-md border-2 ${done ? 'border-brand bg-brand text-on-brand' : 'border-line-strong'}`}
               >
                 {done && '✓'}
               </span>
@@ -178,7 +177,7 @@ function BriefPreview() {
       </div>
       <div className="card absolute -bottom-16 -left-4 -rotate-2 px-5 py-4 sm:-left-10">
         <p className="flex items-center gap-2 text-sm font-bold">
-          <NotebookPen className="size-4 text-teal" /> Answer noted
+          <NotebookPen className="size-4 text-brand" /> Answer noted
         </p>
         <p className="mt-1 text-sm text-ink-soft">“Try screen breaks; come back if no better in 2 weeks.”</p>
       </div>

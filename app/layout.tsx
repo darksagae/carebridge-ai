@@ -15,10 +15,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f4f7f9' },
-    { media: '(prefers-color-scheme: dark)', color: '#0b141a' },
-  ],
+  themeColor: '#ffffff',
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -28,7 +25,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
-          className="sr-only z-50 rounded-xl bg-teal px-4 py-2 text-on-teal focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+          className="sr-only z-50 rounded-xl bg-brand px-4 py-2 text-on-brand focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
         >
           Skip to content
         </a>

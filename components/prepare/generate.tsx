@@ -74,11 +74,11 @@ export function GenerateStep({ intake, onBrief }: { intake: Intake; onBrief: (br
             return (
               <label
                 key={id}
-                className={`flex gap-4 rounded-3xl border-2 p-5 transition-colors has-focus-visible:outline-3 has-focus-visible:outline-teal ${
+                className={`flex gap-4 rounded-3xl border-2 p-5 transition-colors has-focus-visible:outline-3 has-focus-visible:outline-brand ${
                   disabled
                     ? 'cursor-not-allowed border-line opacity-60'
                     : checked
-                      ? 'cursor-pointer border-teal bg-teal-soft'
+                      ? 'cursor-pointer border-brand bg-brand-soft'
                       : 'cursor-pointer border-line hover:border-line-strong'
                 }`}
               >
@@ -91,7 +91,7 @@ export function GenerateStep({ intake, onBrief }: { intake: Intake; onBrief: (br
                   onChange={() => (setMode(id), setError(null))}
                 />
                 <span
-                  className={`grid size-11 shrink-0 place-items-center rounded-2xl ${checked ? 'bg-teal text-on-teal' : 'bg-sunken text-teal'}`}
+                  className={`grid size-11 shrink-0 place-items-center rounded-2xl ${checked ? 'bg-brand text-on-brand' : 'bg-sunken text-brand'}`}
                 >
                   <Icon className="size-5" aria-hidden="true" />
                 </span>
@@ -111,7 +111,7 @@ export function GenerateStep({ intake, onBrief }: { intake: Intake; onBrief: (br
             type="checkbox"
             checked={consent}
             onChange={(e) => setConsent(e.target.checked)}
-            className="mt-1 size-5 shrink-0 accent-teal"
+            className="mt-1 size-5 shrink-0 accent-brand"
           />
           <span className="text-sm">
             I agree to send these notes to Vercel AI Gateway and its AI model provider to draft my brief. I’ve left out

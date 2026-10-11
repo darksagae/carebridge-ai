@@ -103,7 +103,7 @@ export function BriefView({
               <ul className="space-y-2">
                 {brief.tell.map((line) => (
                   <li key={line} className="flex gap-3">
-                    <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-teal" aria-hidden="true" />
+                    <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-brand" aria-hidden="true" />
                     {line}
                   </li>
                 ))}
@@ -185,7 +185,7 @@ export function BriefView({
           </button>
           <button type="button" className="btn btn-secondary w-full" onClick={copy}>
             {copied ? (
-              <Check className="size-5 text-teal" aria-hidden="true" />
+              <Check className="size-5 text-brand" aria-hidden="true" />
             ) : (
               <ClipboardCopy className="size-5" aria-hidden="true" />
             )}
@@ -319,7 +319,7 @@ function QuestionList({ questions, onChange }: { questions: BriefQuestion[]; onC
           <li key={q.id} className="group rounded-2xl border border-line p-3 print:border-0 print:p-1">
             <div className="flex items-start gap-3">
               <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-sunken text-sm font-bold">
-                {q.asked ? <Check className="size-4 text-teal" strokeWidth={3} aria-label="Asked" /> : index + 1}
+                {q.asked ? <Check className="size-4 text-brand" strokeWidth={3} aria-label="Asked" /> : index + 1}
               </span>
               {editing === q.id ? (
                 <form
@@ -348,7 +348,7 @@ function QuestionList({ questions, onChange }: { questions: BriefQuestion[]; onC
                     {q.text}
                   </p>
                   {q.answer?.trim() && (
-                    <p className="mt-1 border-l-4 border-teal pl-3 text-sm whitespace-pre-wrap text-ink-soft">
+                    <p className="mt-1 border-l-4 border-brand pl-3 text-sm whitespace-pre-wrap text-ink-soft">
                       {q.answer.trim()}
                     </p>
                   )}
@@ -360,7 +360,7 @@ function QuestionList({ questions, onChange }: { questions: BriefQuestion[]; onC
                   pressed={q.priority === 'high'}
                   onClick={() => patch(q.id, { priority: q.priority === 'high' ? 'normal' : 'high' })}
                 >
-                  <Star className={`size-4 ${q.priority === 'high' ? 'fill-teal text-teal' : ''}`} />
+                  <Star className={`size-4 ${q.priority === 'high' ? 'fill-brand text-brand' : ''}`} />
                 </IconButton>
                 <span className="hidden sm:contents">
                   <IconButton label={`Move up: ${q.text}`} disabled={index === 0} onClick={() => move(index, -1)}>

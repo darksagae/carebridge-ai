@@ -39,8 +39,8 @@ export function VisitStep({ intake, set }: StepProps) {
             return (
               <label
                 key={type.id}
-                className={`flex cursor-pointer items-center gap-3 rounded-2xl border-2 px-4 py-3.5 font-bold transition-colors has-focus-visible:outline-3 has-focus-visible:outline-teal ${
-                  checked ? 'border-teal bg-teal-soft' : 'border-line hover:border-line-strong'
+                className={`flex cursor-pointer items-center gap-3 rounded-2xl border-2 px-4 py-3.5 font-bold transition-colors has-focus-visible:outline-3 has-focus-visible:outline-brand ${
+                  checked ? 'border-brand bg-brand-soft' : 'border-line hover:border-line-strong'
                 }`}
               >
                 <input
@@ -51,7 +51,7 @@ export function VisitStep({ intake, set }: StepProps) {
                   onChange={() => set({ visitType: type.id })}
                 />
                 <span
-                  className={`grid size-6 shrink-0 place-items-center rounded-full border-2 ${checked ? 'border-teal bg-teal text-on-teal' : 'border-line-strong'}`}
+                  className={`grid size-6 shrink-0 place-items-center rounded-full border-2 ${checked ? 'border-brand bg-brand text-on-brand' : 'border-line-strong'}`}
                   aria-hidden="true"
                 >
                   {checked && <Check className="size-3.5" strokeWidth={3.5} />}
@@ -212,7 +212,7 @@ export function ConcernStep({ intake, set, errors }: StepProps & { errors: Recor
                   </div>
                   <div>
                     <label htmlFor={`s-sev-${symptom.id}`} className="label flex justify-between text-sm">
-                      How bad, at its worst? <span className="text-teal-strong">{symptom.severity}/10</span>
+                      How bad, at its worst? <span className="text-brand-strong">{symptom.severity}/10</span>
                     </label>
                     <input
                       id={`s-sev-${symptom.id}`}
@@ -222,7 +222,7 @@ export function ConcernStep({ intake, set, errors }: StepProps & { errors: Recor
                       value={symptom.severity}
                       onChange={(e) => update(symptom.id, { severity: Number(e.target.value) })}
                       aria-valuetext={`${symptom.severity} out of 10`}
-                      className="mt-3 w-full accent-teal"
+                      className="mt-3 w-full accent-brand"
                     />
                     <div className="flex justify-between text-xs text-ink-soft" aria-hidden="true">
                       <span>Mild</span>
@@ -397,8 +397,8 @@ export function GoalsStep({ intake, set }: StepProps) {
             return (
               <label
                 key={goal.id}
-                className={`flex cursor-pointer items-center gap-2 rounded-full border-2 px-4 py-2 font-bold transition-colors has-focus-visible:outline-3 has-focus-visible:outline-teal ${
-                  checked ? 'border-teal bg-teal text-on-teal' : 'border-line-strong hover:border-teal'
+                className={`flex cursor-pointer items-center gap-2 rounded-full border-2 px-4 py-2 font-bold transition-colors has-focus-visible:outline-3 has-focus-visible:outline-brand ${
+                  checked ? 'border-brand bg-brand text-on-brand' : 'border-line-strong hover:border-brand'
                 }`}
               >
                 <input
@@ -450,7 +450,7 @@ export function GoalsStep({ intake, set }: StepProps) {
           <ul className="mt-4 space-y-2">
             {intake.questions.map((question, index) => (
               <li key={`${question}-${index}`} className="flex items-center gap-3 rounded-2xl bg-sunken px-4 py-3">
-                <Star className="size-4 shrink-0 fill-teal text-teal" aria-hidden="true" />
+                <Star className="size-4 shrink-0 fill-brand text-brand" aria-hidden="true" />
                 <span className="flex-1">{question}</span>
                 <button
                   type="button"

@@ -55,7 +55,7 @@ export function VisitMode({
         </div>
         <div className="h-1.5 bg-sunken">
           <div
-            className="h-full bg-teal transition-[width] duration-300"
+            className="h-full bg-brand transition-[width] duration-300"
             style={{ width: `${(asked / Math.max(total, 1)) * 100}%` }}
           />
         </div>
@@ -77,7 +77,7 @@ export function VisitMode({
             {brief.questions.map((q, index) => (
               <li
                 key={q.id}
-                className={`rounded-3xl border-2 p-5 transition-colors ${q.asked ? 'border-teal bg-teal-soft' : 'border-line bg-surface'}`}
+                className={`rounded-3xl border-2 p-5 transition-colors ${q.asked ? 'border-brand bg-brand-soft' : 'border-line bg-surface'}`}
               >
                 <label className="flex cursor-pointer gap-4">
                   <input
@@ -88,8 +88,8 @@ export function VisitMode({
                   />
                   <span
                     aria-hidden="true"
-                    className={`grid size-9 shrink-0 place-items-center rounded-xl border-2 peer-focus-visible:outline-3 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-teal ${
-                      q.asked ? 'border-teal bg-teal text-on-teal' : 'border-line-strong'
+                    className={`grid size-9 shrink-0 place-items-center rounded-xl border-2 peer-focus-visible:outline-3 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand ${
+                      q.asked ? 'border-brand bg-brand text-on-brand' : 'border-line-strong'
                     }`}
                   >
                     {q.asked ? (
@@ -124,7 +124,7 @@ export function VisitMode({
             <ul className="mt-3 space-y-2 text-lg">
               {brief.tell.map((line) => (
                 <li key={line} className="flex gap-3">
-                  <span className="mt-3 size-2 shrink-0 rounded-full bg-teal" aria-hidden="true" />
+                  <span className="mt-3 size-2 shrink-0 rounded-full bg-brand" aria-hidden="true" />
                   {line}
                 </li>
               ))}

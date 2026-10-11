@@ -82,7 +82,7 @@ export function PrepareApp() {
       <>
         <div className="no-print mb-6 flex flex-wrap items-end justify-between gap-3">
           <div>
-            <p className="text-sm font-bold tracking-[0.14em] text-teal-strong uppercase">Ready</p>
+            <p className="text-sm font-bold tracking-[0.14em] text-brand-strong uppercase">Ready</p>
             <h1 className="font-serif text-4xl font-semibold tracking-tight">Your visit brief</h1>
           </div>
           <StorageToggle remember={remember} setRemember={setRemember} />
@@ -114,7 +114,7 @@ export function PrepareApp() {
           </div>
           <div className="mt-2 h-2 overflow-hidden rounded-full bg-sunken">
             <div
-              className="h-full rounded-full bg-teal transition-[width] duration-300"
+              className="h-full rounded-full bg-brand transition-[width] duration-300"
               style={{ width: `${((step + 1) / STEPS.length) * 100}%` }}
             />
           </div>
@@ -161,15 +161,15 @@ export function PrepareApp() {
                     onClick={() => goTo(index)}
                     aria-current={status === 'current' ? 'step' : undefined}
                     className={`flex w-full items-center gap-3 rounded-2xl px-3 py-2.5 text-left font-bold transition-colors ${
-                      status === 'current' ? 'bg-teal-soft text-teal-strong' : 'text-ink-soft hover:bg-sunken'
+                      status === 'current' ? 'bg-brand-soft text-brand-strong' : 'text-ink-soft hover:bg-sunken'
                     }`}
                   >
                     <span
                       className={`grid size-7 shrink-0 place-items-center rounded-full text-sm ${
                         status === 'done'
-                          ? 'bg-teal text-on-teal'
+                          ? 'bg-brand text-on-brand'
                           : status === 'current'
-                            ? 'border-2 border-teal'
+                            ? 'border-2 border-brand'
                             : 'border-2 border-line-strong'
                       }`}
                     >
@@ -211,7 +211,7 @@ function StorageToggle({ remember, setRemember }: { remember: boolean; setRememb
         type="checkbox"
         checked={remember}
         onChange={(e) => setRemember(e.target.checked)}
-        className="mt-0.5 size-5 shrink-0 accent-teal"
+        className="mt-0.5 size-5 shrink-0 accent-brand"
       />
       <span>
         <span className="flex items-center gap-1.5 font-bold">

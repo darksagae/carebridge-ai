@@ -4,45 +4,23 @@
   --font-sans: 'Atkinson Hyperlegible', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Source Serif 4 Variable', ui-serif, Georgia, serif;
 
-  --color-canvas: #f4f7f9;
+  --color-canvas: #ffffff;
   --color-surface: #ffffff;
-  --color-sunken: #edf2f5;
-  --color-ink: #0f2533;
-  --color-ink-soft: #4b6272;
-  --color-line: #d9e3ea;
-  --color-line-strong: #bccbd6;
-  --color-teal: #0b7a75;
-  --color-teal-strong: #075e5a;
-  --color-teal-soft: #e0f2f0;
-  --color-on-teal: #ffffff;
+  --color-sunken: #f5f5f5;
+  --color-ink: #111111;
+  --color-ink-soft: #555555;
+  --color-line: #e5e5e5;
+  --color-line-strong: #cfcfcf;
+  --color-brand: #111111;
+  --color-brand-strong: #000000;
+  --color-brand-soft: #f2f2f2;
+  --color-on-brand: #ffffff;
   --color-amber-soft: #fff4dc;
   --color-amber-ink: #7a4a00;
   --color-danger: #b42318;
   --color-danger-soft: #fdecea;
 
-  --shadow-card: 0 1px 2px rgb(15 37 51 / 0.05), 0 10px 30px -16px rgb(15 37 51 / 0.18);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-canvas: #0b141a;
-    --color-surface: #101d25;
-    --color-sunken: #16262f;
-    --color-ink: #e5eef3;
-    --color-ink-soft: #93a8b5;
-    --color-line: #20323d;
-    --color-line-strong: #2f4654;
-    --color-teal: #4fd1c5;
-    --color-teal-strong: #7ddfd6;
-    --color-teal-soft: #10302f;
-    --color-on-teal: #04201e;
-    --color-amber-soft: #33270f;
-    --color-amber-ink: #f6c76b;
-    --color-danger: #ff8a80;
-    --color-danger-soft: #3a1a19;
-    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4);
-    color-scheme: dark;
-  }
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 10px 30px -16px rgb(0 0 0 / 0.16);
 }
 
 @layer base {
@@ -54,7 +32,7 @@
     line-height: 1.6;
   }
   :focus-visible {
-    outline: 3px solid var(--color-teal);
+    outline: 3px solid var(--color-brand);
     outline-offset: 2px;
   }
   h1,
@@ -72,16 +50,16 @@
     @apply inline-flex min-h-12 cursor-pointer items-center justify-center gap-2 rounded-2xl px-5 font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
   }
   .btn-primary {
-    @apply bg-teal text-on-teal hover:bg-teal-strong;
+    @apply bg-brand text-on-brand hover:bg-brand-strong;
   }
   .btn-secondary {
-    @apply border-2 border-line-strong bg-surface text-ink hover:border-teal;
+    @apply border-2 border-line-strong bg-surface text-ink hover:border-brand;
   }
   .btn-ghost {
     @apply text-ink-soft hover:bg-sunken hover:text-ink;
   }
   .input {
-    @apply min-h-12 w-full rounded-2xl border-2 border-line-strong bg-surface px-4 py-2.5 text-ink transition-colors placeholder:text-ink-soft/75 focus:border-teal focus:outline-none;
+    @apply min-h-12 w-full rounded-2xl border-2 border-line-strong bg-surface px-4 py-2.5 text-ink transition-colors placeholder:text-ink-soft/75 focus:border-brand focus:outline-none;
   }
   .label {
     @apply mb-2 block font-bold;
