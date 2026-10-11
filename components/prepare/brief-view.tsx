@@ -173,11 +173,6 @@ export function BriefView({
           <button type="button" className="btn btn-primary w-full text-lg" onClick={onVisit}>
             <ListChecks className="size-5" aria-hidden="true" /> {asked ? 'Back to visit mode' : 'Start visit mode'}
           </button>
-          <p className="text-sm text-ink-soft">
-            {answered
-              ? 'Your notes from the visit are saved with the brief. Download them to keep a copy.'
-              : 'Use visit mode in the room to tick off questions and note the answers.'}
-          </p>
         </div>
         <div className="card space-y-2 p-5">
           <button type="button" className="btn btn-secondary w-full" onClick={() => window.print()}>

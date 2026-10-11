@@ -30,34 +30,20 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           Skip to content
         </a>
         <header className="no-print border-b border-line bg-canvas/90 backdrop-blur">
-          <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+          <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
             <Link href="/" className="rounded-xl" aria-label="CareBridge home">
               <Logo />
             </Link>
-            <nav className="flex items-center gap-1">
-              <Link href="/#how" className="btn btn-ghost hidden min-h-10 px-3 sm:inline-flex">
-                How it works
-              </Link>
-              <Link href="/#privacy" className="btn btn-ghost hidden min-h-10 px-3 sm:inline-flex">
-                Privacy
-              </Link>
-              <Link href="/prepare" className="btn btn-primary min-h-10 px-4">
-                Prepare for a visit
-              </Link>
-            </nav>
           </div>
         </header>
         <main id="main" className="flex-1">
           {children}
         </main>
         <footer className="no-print border-t border-line">
-          <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-ink-soft sm:px-6 md:flex-row md:justify-between">
-            <p>
-              <strong className="text-ink">Not for emergencies.</strong> If you think you need urgent help, call your
-              local emergency number.
-            </p>
-            <p>CareBridge does not diagnose or give medical advice · Built for DSH Hacks V2</p>
-          </div>
+          <p className="mx-auto max-w-6xl px-4 py-5 text-sm text-ink-soft sm:px-6">
+            <strong className="text-ink">Not for emergencies</strong> — call your local emergency number. CareBridge
+            does not diagnose or give medical advice. Your notes stay in this browser.
+          </p>
         </footer>
       </body>
     </html>

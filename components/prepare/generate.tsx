@@ -49,7 +49,7 @@ export function GenerateStep({ intake, onBrief }: { intake: Intake; onBrief: (br
       id: 'template',
       icon: FileText,
       title: 'Built-in template',
-      body: 'Instant and fully private: your brief is made on this device and nothing is sent anywhere.',
+      body: 'Instant. Nothing leaves this device.',
     },
     {
       id: 'ai',
@@ -57,8 +57,8 @@ export function GenerateStep({ intake, onBrief }: { intake: Intake; onBrief: (br
       title: 'Write it with AI',
       body:
         aiAvailable === false
-          ? 'Not set up on this server. The template gives you the same structure.'
-          : 'A more natural summary and tailored questions. Your notes are sent to an AI service to draft it.',
+          ? 'Not set up on this server.'
+          : 'More natural wording. Sends your notes to an AI service.',
       disabled: aiAvailable === false,
     },
   ]

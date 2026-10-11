@@ -9,22 +9,11 @@ type StepProps = { intake: Intake; set: (patch: Partial<Intake>) => void }
 
 const newId = () => Math.random().toString(36).slice(2, 10)
 
-export function StepHeading({
-  title,
-  intro,
-  headingRef,
-}: {
-  title: string
-  intro: string
-  headingRef: React.Ref<HTMLHeadingElement>
-}) {
+export function StepHeading({ title, headingRef }: { title: string; headingRef: React.Ref<HTMLHeadingElement> }) {
   return (
-    <div className="mb-8">
-      <h2 ref={headingRef} tabIndex={-1} className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
-        {title}
-      </h2>
-      <p className="mt-2 text-ink-soft">{intro}</p>
-    </div>
+    <h2 ref={headingRef} tabIndex={-1} className="mb-8 font-serif text-3xl font-semibold tracking-tight">
+      {title}
+    </h2>
   )
 }
 
